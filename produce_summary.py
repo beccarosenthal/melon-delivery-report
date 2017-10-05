@@ -4,10 +4,11 @@ day3_file = open("um-deliveries-20140521.txt")
 all_files = [day1_file, day2_file, day3_file]
 
 
-def turn_line_into_list(text_files):
-    """takes list of files as parameter, returns list of strings
+def turn_files_into_pretty_text(text_files):
+    """takes list of files as parameter, prints out readible version
 
-    Each item in the list of strings is a line from the file"""
+    Fn strips each file by line, gets rid of duplicates, then splits the line
+    into usable chunks before printing out the usable version"""
     list_of_all_lines = []
     for item in text_files:
         for line in item:
